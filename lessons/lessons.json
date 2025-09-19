@@ -1,1 +1,30 @@
-
+[
+  {
+    "title": "Hello TON",
+    "starter": "console.log('Hello TON!')"
+  },
+  {
+    "title": "Add Two Numbers",
+    "starter": "let a = 5;\nlet b = 10;\nconsole.log(a + b);"
+  },
+  {
+    "title": "Loop Example",
+    "starter": "for(let i=1;i<=5;i++){console.log(i);}"
+  },
+  {
+    "title": "Function Example",
+    "starter": "function greet(name){return 'Hello ' + name;}\nconsole.log(greet('TON'));"
+  },
+  {
+    "title": "Array Example",
+    "starter": "let arr = [1,2,3];\nconsole.log(arr.length);"
+  },
+  {
+    "title": "String Example",
+    "starter": "let str = 'TON';\nconsole.log(str.toLowerCase());"
+  },
+  {
+    "title": "Condition Example",
+    "starter": "let x = 10;\nif(x > 5){console.log('x is large');}"
+  }
+]

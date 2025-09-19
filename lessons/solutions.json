@@ -1,0 +1,9 @@
+{
+  "Hello TON": "console.log('Hello TON!');",
+  "Add Two Numbers": "let a=5; let b=10; console.log(a+b);",
+  "Loop Example": "for(let i=1;i<=5;i++){console.log(i);}",
+  "Function Example": "function greet(name){return 'Hello ' + name;} console.log(greet('TON'));",
+  "Array Example": "let arr=[1,2,3]; console.log(arr.length);",
+  "String Example": "let str='TON'; console.log(str.toLowerCase());",
+  "Condition Example": "let x=10; if(x>5){console.log('x is large');}"
+}
