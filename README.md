@@ -5,7 +5,7 @@ An interactive tutorial to practice coding with instant feedback, built for the 
 ![screenshot](screenshot.png)
 
 ## 🌍 Live Demo
-👉 [Live Demo](https://YOUR-USERNAME.github.io/TON-play-code/)
+👉 [Live Demo](https://tajbouk-cmd.github.io/TON-play-code/)
 
 ## 📚 Features
 - 7 coding lessons (Hello World, Functions, Arrays, Strings, Conditions...)
@@ -16,13 +16,13 @@ An interactive tutorial to practice coding with instant feedback, built for the 
 
 ## 📂 How to run locally
 ```bash
-git clone https://github.com/YOUR-USERNAME/TON-play-code.git
+git clone https://github.com/tajbouk-cmd/TON-play-code.git
 cd TON-play-code
 open index.html
 ```
 
 ## 💰 TON Wallet
-`PUT-YOUR-TON-ADDRESS-HERE`
+`UQCwuvtVV7UA7ATGOxq_mjp_B-mXzh0esZRDNVPOPc-0c5V8`
 
 ## 🙌 Contribution
 Feedback and contributions are welcome!
