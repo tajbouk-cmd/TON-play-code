@@ -1,59 +1,21 @@
-let lessons = [];
-let currentLesson = 0;
-let solutions = {};
+const toggleBtn = document.getElementById("theme-toggle");
+const icon = document.getElementById("theme-icon");
 
-async function loadLessons() {
-  const response = await fetch('lessons/lessons.json');
-  lessons = await response.json();
-
-  const solRes = await fetch('lessons/solutions.json');
-  solutions = await solRes.json();
-
-  const select = document.getElementById('lessonSelect');
-  lessons.forEach((lesson, i) => {
-    const opt = document.createElement('option');
-    opt.value = i;
-    opt.textContent = lesson.title;
-    select.appendChild(opt);
-  });
-  select.onchange = () => loadLesson(parseInt(select.value));
-  loadLesson(0);
+// استرجاع الثيم المحفوظ
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  icon.textContent = "☀️";
 }
 
-function loadLesson(index) {
-  currentLesson = index;
-  const lesson = lessons[index];
-  document.getElementById('lessonSelect').value = index;
-  document.getElementById('editor').value = lesson.starter;
-  document.getElementById('output').textContent = '';
-}
+// عند الضغط على الزر
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 
-function prevLesson() {
-  if (currentLesson > 0) {
-    loadLesson(currentLesson - 1);
+  if (document.body.classList.contains("dark")) {
+    icon.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.textContent = "🌙";
+    localStorage.setItem("theme", "light");
   }
-}
-
-function nextLesson() {
-  if (currentLesson < lessons.length - 1) {
-    loadLesson(currentLesson + 1);
-  }
-}
-
-function runCode() {
-  const code = document.getElementById('editor').value;
-  try {
-    let result = eval(code);
-    document.getElementById('output').textContent = result ?? "Code executed.";
-  } catch (e) {
-    document.getElementById('output').textContent = 'Error: ' + e.message;
-  }
-}
-
-function showSolution() {
-  const lesson = lessons[currentLesson].title;
-  const sol = solutions[lesson];
-  document.getElementById('editor').value = sol;
-}
-
-window.onload = loadLessons;
+});

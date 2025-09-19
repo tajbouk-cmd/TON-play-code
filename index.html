@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🚀 TON PlayCode</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TON PlayCode</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <h1>🚀 TON PlayCode</h1>
-    <p>Learn coding with interactive lessons powered by TON!</p>
-
-    <div class="controls">
-      <button onclick="prevLesson()">⬅ Previous</button>
-      <select id="lessonSelect"></select>
-      <button onclick="nextLesson()">Next ➡</button>
-    </div>
-
-    <textarea id="editor" placeholder="Write your code here..."></textarea>
-    <div class="buttons">
-      <button onclick="runCode()">▶ Run</button>
-      <button onclick="showSolution()">💡 Show Solution</button>
-    </div>
-
-    <pre id="output"></pre>
-  </div>
+  <header>
+    <h1>Hello TON!</h1>
+    <button id="theme-toggle" class="theme-toggle">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </header>
+  <main>
+    <p>Welcome to TON PlayCode interactive tutorial.</p>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
